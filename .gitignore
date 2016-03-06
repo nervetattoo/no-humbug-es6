@@ -1,0 +1,13 @@
+node_modules
+bower_components
+npm-debug.log
+.env
+.tmp
+*~
+*#
+.DS_STORE
+.netbeans
+nbproject
+.idea
+.node_history
+*.jsonl

@@ -1,0 +1,25 @@
+{
+
+  "name": "no-humbug-es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "repl": "./node_modules/.bin/babel-node -b es2015"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nervetattoo/no-humbug-es6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nervetattoo/no-humbug-es6/issues"
+  },
+  "homepage": "https://github.com/nervetattoo/no-humbug-es6#readme",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0"
+  }
+}
