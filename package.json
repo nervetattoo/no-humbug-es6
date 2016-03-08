@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "repl": "./node_modules/.bin/babel-node --presets es2015 --"
+    "repl": "./node_modules/.bin/babel-node --presets es2015 --",
+    "test": "node --es_staging --harmony_destructuring --harmony_modules --harmony_default_parameters --"
   },
   "repository": {
     "type": "git",
