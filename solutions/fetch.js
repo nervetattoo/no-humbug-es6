@@ -1,31 +1,23 @@
 'use strict'
 
 const qs = require('querystring')
-const config = require('../config')
-
-const container = document.createElement('div')
-document.querySelector('body').appendChild(container)
-
-
-const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1267&api_key=DEMO_KEY'
 
 const log = item => console.log(item)
 
 class NasaPhotoForwarder {
-  constructor (container, url) {
-    this.$ = container
-    this.url = url
+  constructor (config) {
+    this.$ = config.container
+    this.slackUrl = config.slackUrl
+    this.apiUrl = config.apiUrl
   }
 
-  load () {
-    fetch(this.url)
+  render () {
+    fetch(this.apiUrl)
       .then(resp => resp.json())
       .then(data => {
         const html = data.photos.map(p => {
           const alt = `Photo by ${p.rover.name} taken on sol ${p.sol} with ${p.camera.full_name}`
-          return `<div>
-            <img src="${p.img_src}" alt="${alt}">
-          </div>`
+          return `<div><img src="${p.img_src}" alt="${alt}"></div>`
         })
 
         this.$.innerHTML = html
@@ -46,7 +38,7 @@ class NasaPhotoForwarder {
       <${src}>`
     }
 
-    fetch(config.slack.url, {
+    fetch(this.slackUrl, {
       method: 'POST',
       body: JSON.stringify(payload)
     })
@@ -62,5 +54,4 @@ class NasaPhotoForwarder {
   }
 }
 
-const app = new NasaPhotoForwarder(container, url)
-app.load()
+module.exports = NasaPhotoForwarder
