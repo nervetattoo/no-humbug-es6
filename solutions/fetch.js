@@ -20,7 +20,7 @@ class NasaPhotoForwarder {
           return `<div><img src="${p.img_src}" alt="${alt}"></div>`
         })
 
-        this.$.innerHTML = html
+        this.$.innerHTML = html.join('')
         this.$.addEventListener('click', e => this.handleClick(e))
       })
   }
