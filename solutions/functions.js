@@ -20,5 +20,7 @@ app.fetch = function () {
   getJSON(data => this.updateUI(data))
 }
 
+const sum = (...nums) => nums.reduce((a,b) => a + b)
+
 // DO NOT MODIFY BELOW HERE
-module.exports = { hello, greeter, app }
+module.exports = { hello, greeter, app, sum }
