@@ -2,7 +2,7 @@
 
 const config = require('../config')
 
-const App = require('../solutions/fetch')
+const App = require('../katas/fetch')
 
 config.container = document.createElement('div')
 document.querySelector('body').appendChild(config.container)
