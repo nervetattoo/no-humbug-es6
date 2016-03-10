@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "repl": "./node_modules/.bin/babel-node --presets es2015 --",
-    "start": "node --es_staging --harmony_destructuring --harmony_modules --harmony_default_parameters --",
+    "start": "node --es_staging --harmony_modules --harmony_destructuring --harmony_modules --harmony_default_parameters --",
     "test:functions": "npm start -s tests/functions.js",
     "test:sugar": "npm start -s tests/sugar.js",
     "test:fetch": "wzrd tests/fetch.js -- -t babelify"
@@ -22,9 +22,10 @@
   },
   "homepage": "https://github.com/nervetattoo/no-humbug-es6#readme",
   "dependencies": {
-    "browserify": "^13.0.0",
-    "babelify": "^7.2.0",
     "babel-preset-es2015": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "tape": "^4.5.1",
     "wzrd": "^1.3.1"
   }
 }
