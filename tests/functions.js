@@ -1,7 +1,7 @@
 'use strict'
 
 const test = require('tape')
-const { hello, greeter, app, sum } = require('../solutions/functions')
+const { hello, greeter, app, sum } = require('../katas/functions')
 
 const name = 'ES2015'
 
